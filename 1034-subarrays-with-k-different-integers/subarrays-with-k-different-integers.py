@@ -2,7 +2,7 @@ class Solution:
     def subarraysWithKDistinct(self, nums: List[int], k: int) -> int:
         return self.atMostK(nums, k) - self.atMostK(nums, k - 1)
 
-    def atMostK(self, nums: List[int], k: int) -> int:
+    def atMostK(self, nums, k):
         count = collections.Counter()
         res = i = 0
         for j in range(len(nums)):
